@@ -5,6 +5,5 @@ When you are going to read a foreign text you
 can make an analysis of the repetition pattern 
 of the words
 
- ![](C:/Users/Nilson/Documents/Python/imagem)
-
+ <img src=”C:\Users\Nilson\Documents\Python”>
 
