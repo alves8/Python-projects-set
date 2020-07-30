@@ -1,4 +1,30 @@
 import re
+
+############ extract_doc_info.py  ##################
+
+from PyPDF2 import PdfFileReader
+
+def extract_information(pdf_path):
+    with open(pdf_path, 'rb') as f:
+        pdf = PdfFileReader(f)
+        information = pdf.getDocumentInfo()
+        number_of_pages = pdf.getNumPages()
+
+    txt = f"""
+    Information about {pdf_path}: 
+
+    Author: {information.author}
+    Creator: {information.creator}
+    Producer: {information.producer}
+    Subject: {information.subject}
+    Title: {information.title}
+    Number of pages: {number_of_pages}
+    """
+
+    print(txt)
+    return information
+
+
 # Open the file and save it in a variable (wordCount) to obtain the string.
 with open('text.txt', 'r') as file1:
     wordCount = file1.read()
