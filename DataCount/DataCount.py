@@ -1,4 +1,3 @@
-import re
 
 ############ extract_doc_info.py  ##################
 
@@ -24,6 +23,7 @@ def extract_information(pdf_path):
     print(txt)
     return information
 
+import re
 
 # Open the file and save it in a variable (wordCount) to obtain the string.
 with open('text.txt', 'r') as file1:
